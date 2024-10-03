@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <title>3D Model Viewer</title>
+  <style>
+    /* Make model-viewer full size of the browser window */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrollbars */
+    }
+
+    model-viewer {
+      width: 100vw;  /* 100% of the viewport width */
+      height: 100vh; /* 100% of the viewport height */
+      field-of-view="30deg"  <!-- Narrower FOV for zoomed-in effect -->
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Adjust the size using inline styling or CSS -->
+  <model-viewer src="metal_rounded.glb" alt="A 3D model" auto-rotate camera-controls></model-viewer>
+</body>
+</html>
