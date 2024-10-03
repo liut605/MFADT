@@ -6,13 +6,18 @@
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <title>3D Model Viewer</title>
   <style>
-    /* Increase the size of the model-viewer */
+    /* Make model-viewer full size of the browser window */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent scrollbars */
+    }
+
     model-viewer {
-      width: 100%;  /* This makes it as wide as the page */
-      height: 4000px; /* You can adjust the height */
-      max-width: 4000px; /* Limits maximum width */
-      margin: auto; /* Centers the model-viewer on the page */
-      display: block; /* Ensures it's treated as a block element */
+      width: 100vw;  /* 100% of the viewport width */
+      height: 100vh; /* 100% of the viewport height */
+      display: block;
     }
   </style>
 </head>
